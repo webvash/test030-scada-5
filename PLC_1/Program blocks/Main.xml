@@ -1,0 +1,593 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Blocks.OB ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input">
+    <Member Name="Initial_Call" Datatype="Bool" Informative="true">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Initial call of this OB</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Remanence" Datatype="Bool" Informative="true">
+      <Comment>
+        <MultiLanguageText Lang="en-US">=True, if remanent data are available</MultiLanguageText>
+      </Comment>
+    </Member>
+  </Section>
+  <Section Name="Temp" />
+  <Section Name="Constant" />
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <Name>Main</Name>
+      <Namespace />
+      <Number>1</Number>
+      <ProgrammingLanguage>LAD</ProgrammingLanguage>
+      <SecondaryType>ProgramCycle</SecondaryType>
+      <SetENOAutomatically>false</SetENOAutomatically>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="Start Button 0" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="Stop Button 0" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="Controler Time" />
+        <Component Name="Time-Right-con1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="Controler Time" />
+        <Component Name="Time-Right-Rest-con1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="Controler Time" />
+        <Component Name="Time-Left-con1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="Controler Time" />
+        <Component Name="Time-Left-Rest-con1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="Belt Conveyor (4m) 0 (+)" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="Belt Conveyor (4m) 0 (-)" />
+      </Symbol>
+    </Access>
+    <Call UId="29">
+      <CallInfo Name="faceplate" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="30">
+          <Component Name="faceplate_DB_1" />
+        </Instance>
+        <Parameter Name="start" Section="Input" Type="Bool" />
+        <Parameter Name="stop" Section="Input" Type="Bool" />
+        <Parameter Name="conveyor-right" Section="Output" Type="Bool" />
+        <Parameter Name="conveyor-left" Section="Output" Type="Bool" />
+        <Parameter Name="Time-Right" Section="InOut" Type="Time" />
+        <Parameter Name="Time-Right-Rest" Section="InOut" Type="Time" />
+        <Parameter Name="Time-Left" Section="InOut" Type="Time" />
+        <Parameter Name="Time-Left-Rest" Section="InOut" Type="Time" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="31">
+      <Powerrail />
+      <NameCon UId="29" Name="en" />
+    </Wire>
+    <Wire UId="32">
+      <IdentCon UId="21" />
+      <NameCon UId="29" Name="start" />
+    </Wire>
+    <Wire UId="33">
+      <IdentCon UId="22" />
+      <NameCon UId="29" Name="stop" />
+    </Wire>
+    <Wire UId="34">
+      <IdentCon UId="23" />
+      <NameCon UId="29" Name="Time-Right" />
+    </Wire>
+    <Wire UId="35">
+      <IdentCon UId="24" />
+      <NameCon UId="29" Name="Time-Right-Rest" />
+    </Wire>
+    <Wire UId="36">
+      <IdentCon UId="25" />
+      <NameCon UId="29" Name="Time-Left" />
+    </Wire>
+    <Wire UId="37">
+      <IdentCon UId="26" />
+      <NameCon UId="29" Name="Time-Left-Rest" />
+    </Wire>
+    <Wire UId="38">
+      <NameCon UId="29" Name="conveyor-right" />
+      <IdentCon UId="27" />
+    </Wire>
+    <Wire UId="39">
+      <NameCon UId="29" Name="conveyor-left" />
+      <IdentCon UId="28" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="8" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="Start Button 1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="Stop Button 1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="Controler Time" />
+        <Component Name="Time-Right-con2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="Controler Time" />
+        <Component Name="Time-Right-Rest-con2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="Controler Time" />
+        <Component Name="Time-Left-con2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="Controler Time" />
+        <Component Name="Time-Left-Rest-con2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="Belt Conveyor (4m) 1 (+)" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="Belt Conveyor (4m) 1 (-)" />
+      </Symbol>
+    </Access>
+    <Call UId="29">
+      <CallInfo Name="faceplate" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="30">
+          <Component Name="faceplate_DB" />
+        </Instance>
+        <Parameter Name="start" Section="Input" Type="Bool" />
+        <Parameter Name="stop" Section="Input" Type="Bool" />
+        <Parameter Name="conveyor-right" Section="Output" Type="Bool" />
+        <Parameter Name="conveyor-left" Section="Output" Type="Bool" />
+        <Parameter Name="Time-Right" Section="InOut" Type="Time" />
+        <Parameter Name="Time-Right-Rest" Section="InOut" Type="Time" />
+        <Parameter Name="Time-Left" Section="InOut" Type="Time" />
+        <Parameter Name="Time-Left-Rest" Section="InOut" Type="Time" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="31">
+      <Powerrail />
+      <NameCon UId="29" Name="en" />
+    </Wire>
+    <Wire UId="32">
+      <IdentCon UId="21" />
+      <NameCon UId="29" Name="start" />
+    </Wire>
+    <Wire UId="33">
+      <IdentCon UId="22" />
+      <NameCon UId="29" Name="stop" />
+    </Wire>
+    <Wire UId="34">
+      <IdentCon UId="23" />
+      <NameCon UId="29" Name="Time-Right" />
+    </Wire>
+    <Wire UId="35">
+      <IdentCon UId="24" />
+      <NameCon UId="29" Name="Time-Right-Rest" />
+    </Wire>
+    <Wire UId="36">
+      <IdentCon UId="25" />
+      <NameCon UId="29" Name="Time-Left" />
+    </Wire>
+    <Wire UId="37">
+      <IdentCon UId="26" />
+      <NameCon UId="29" Name="Time-Left-Rest" />
+    </Wire>
+    <Wire UId="38">
+      <NameCon UId="29" Name="conveyor-right" />
+      <IdentCon UId="27" />
+    </Wire>
+    <Wire UId="39">
+      <NameCon UId="29" Name="conveyor-left" />
+      <IdentCon UId="28" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="9" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="B" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="D" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="Start Button 2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="Stop Button 2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="Controler Time" />
+        <Component Name="Time-Right-con3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="Controler Time" />
+        <Component Name="Time-Right-Rest-con3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="Controler Time" />
+        <Component Name="Time-Left-con3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="Controler Time" />
+        <Component Name="Time-Left-Rest-con3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="Belt Conveyor (4m) 2 (+)" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="Belt Conveyor (4m) 2 (-)" />
+      </Symbol>
+    </Access>
+    <Call UId="29">
+      <CallInfo Name="faceplate" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="30">
+          <Component Name="faceplate_DB_2" />
+        </Instance>
+        <Parameter Name="start" Section="Input" Type="Bool" />
+        <Parameter Name="stop" Section="Input" Type="Bool" />
+        <Parameter Name="conveyor-right" Section="Output" Type="Bool" />
+        <Parameter Name="conveyor-left" Section="Output" Type="Bool" />
+        <Parameter Name="Time-Right" Section="InOut" Type="Time" />
+        <Parameter Name="Time-Right-Rest" Section="InOut" Type="Time" />
+        <Parameter Name="Time-Left" Section="InOut" Type="Time" />
+        <Parameter Name="Time-Left-Rest" Section="InOut" Type="Time" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="31">
+      <Powerrail />
+      <NameCon UId="29" Name="en" />
+    </Wire>
+    <Wire UId="32">
+      <IdentCon UId="21" />
+      <NameCon UId="29" Name="start" />
+    </Wire>
+    <Wire UId="33">
+      <IdentCon UId="22" />
+      <NameCon UId="29" Name="stop" />
+    </Wire>
+    <Wire UId="34">
+      <IdentCon UId="23" />
+      <NameCon UId="29" Name="Time-Right" />
+    </Wire>
+    <Wire UId="35">
+      <IdentCon UId="24" />
+      <NameCon UId="29" Name="Time-Right-Rest" />
+    </Wire>
+    <Wire UId="36">
+      <IdentCon UId="25" />
+      <NameCon UId="29" Name="Time-Left" />
+    </Wire>
+    <Wire UId="37">
+      <IdentCon UId="26" />
+      <NameCon UId="29" Name="Time-Left-Rest" />
+    </Wire>
+    <Wire UId="38">
+      <NameCon UId="29" Name="conveyor-right" />
+      <IdentCon UId="27" />
+    </Wire>
+    <Wire UId="39">
+      <NameCon UId="29" Name="conveyor-left" />
+      <IdentCon UId="28" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="E" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="10" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="11" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="12" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="Start Button 3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="Stop Button 3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="Controler Time" />
+        <Component Name="Time-Right-con4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="Controler Time" />
+        <Component Name="Time-Right-Rest-con4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="Controler Time" />
+        <Component Name="Time-Left-con4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="Controler Time" />
+        <Component Name="Time-Left-Rest-con4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="Belt Conveyor (4m) 3 (+)" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="Belt Conveyor (4m) 3 (-)" />
+      </Symbol>
+    </Access>
+    <Call UId="29">
+      <CallInfo Name="faceplate" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="30">
+          <Component Name="faceplate_DB_3" />
+        </Instance>
+        <Parameter Name="start" Section="Input" Type="Bool" />
+        <Parameter Name="stop" Section="Input" Type="Bool" />
+        <Parameter Name="conveyor-right" Section="Output" Type="Bool" />
+        <Parameter Name="conveyor-left" Section="Output" Type="Bool" />
+        <Parameter Name="Time-Right" Section="InOut" Type="Time" />
+        <Parameter Name="Time-Right-Rest" Section="InOut" Type="Time" />
+        <Parameter Name="Time-Left" Section="InOut" Type="Time" />
+        <Parameter Name="Time-Left-Rest" Section="InOut" Type="Time" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="31">
+      <Powerrail />
+      <NameCon UId="29" Name="en" />
+    </Wire>
+    <Wire UId="32">
+      <IdentCon UId="21" />
+      <NameCon UId="29" Name="start" />
+    </Wire>
+    <Wire UId="33">
+      <IdentCon UId="22" />
+      <NameCon UId="29" Name="stop" />
+    </Wire>
+    <Wire UId="34">
+      <IdentCon UId="23" />
+      <NameCon UId="29" Name="Time-Right" />
+    </Wire>
+    <Wire UId="35">
+      <IdentCon UId="24" />
+      <NameCon UId="29" Name="Time-Right-Rest" />
+    </Wire>
+    <Wire UId="36">
+      <IdentCon UId="25" />
+      <NameCon UId="29" Name="Time-Left" />
+    </Wire>
+    <Wire UId="37">
+      <IdentCon UId="26" />
+      <NameCon UId="29" Name="Time-Left-Rest" />
+    </Wire>
+    <Wire UId="38">
+      <NameCon UId="29" Name="conveyor-right" />
+      <IdentCon UId="27" />
+    </Wire>
+    <Wire UId="39">
+      <NameCon UId="29" Name="conveyor-left" />
+      <IdentCon UId="28" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="13" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="14" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="15" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="16" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="17" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource />
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="18" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="19" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="1A" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="1B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="1C" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="1D" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text>"Main Program Sweep (Cycle)"</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.OB>
+</Document>
