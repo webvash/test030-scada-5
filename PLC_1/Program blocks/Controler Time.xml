@@ -5,11 +5,11 @@
     <AttributeList>
       <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
   <Section Name="Static">
-    <Member Name="Time-Right-con1" Datatype="Time">
-      <StartValue>T#3s</StartValue>
-    </Member>
     <Member Name="Time-Right-Rest-con1" Datatype="Time">
       <StartValue>T#2s</StartValue>
+    </Member>
+    <Member Name="Time-Right-con1" Datatype="Time">
+      <StartValue>T#3s</StartValue>
     </Member>
     <Member Name="Time-Left-con1" Datatype="Time">
       <StartValue>T#3s</StartValue>
