@@ -18,6 +18,8 @@
     <Member Name="Time-Right" Datatype="Time" />
     <Member Name="Time-Right-Rest" Datatype="Time" />
     <Member Name="Time-Left" Datatype="Time" />
+    <Member Name="memory-stop" Datatype="Bool" />
+    <Member Name="memory-start" Datatype="Bool" />
     <Member Name="Time-Left-Rest" Datatype="Time" />
   </Section>
   <Section Name="Static">
