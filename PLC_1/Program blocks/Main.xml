@@ -73,34 +73,58 @@
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
         <Component Name="Controler Time" />
-        <Component Name="mem-stop_1" />
+        <Component Name="Time-Left-Rest-con1" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
         <Component Name="Controler Time" />
-        <Component Name="mem-strat_1" />
+        <Component Name="mem-stop_1" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
         <Component Name="Controler Time" />
-        <Component Name="Time-Left-Rest-con1" />
+        <Component Name="mem-strat_1" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="29">
       <Symbol>
-        <Component Name="Belt Conveyor (4m) 0 (+)" />
+        <Component Name="Controler Time" />
+        <Component Name="timer-right-1" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="30">
       <Symbol>
+        <Component Name="Controler Time" />
+        <Component Name="timer-right-rest-1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="Controler Time" />
+        <Component Name="timer-left-1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="Controler Time" />
+        <Component Name="timer-left-rest-1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="Belt Conveyor (4m) 0 (+)" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
         <Component Name="Belt Conveyor (4m) 0 (-)" />
       </Symbol>
     </Access>
-    <Call UId="31">
+    <Call UId="35">
       <CallInfo Name="faceplate" BlockType="FB">
-        <Instance Scope="GlobalVariable" UId="32">
+        <Instance Scope="GlobalVariable" UId="36">
           <Component Name="faceplate_DB_1" />
         </Instance>
         <Parameter Name="start" Section="Input" Type="Bool" />
@@ -110,56 +134,76 @@
         <Parameter Name="Time-Right" Section="InOut" Type="Time" />
         <Parameter Name="Time-Right-Rest" Section="InOut" Type="Time" />
         <Parameter Name="Time-Left" Section="InOut" Type="Time" />
+        <Parameter Name="Time-Left-Rest" Section="InOut" Type="Time" />
         <Parameter Name="memory-stop" Section="InOut" Type="Bool" />
         <Parameter Name="memory-start" Section="InOut" Type="Bool" />
-        <Parameter Name="Time-Left-Rest" Section="InOut" Type="Time" />
+        <Parameter Name="Timer-Right" Section="InOut" Type="TP_TIME" />
+        <Parameter Name="Timer-Right-Rest" Section="InOut" Type="TP_TIME" />
+        <Parameter Name="Timer-Left" Section="InOut" Type="TP_TIME" />
+        <Parameter Name="Timer-Left-Rest" Section="InOut" Type="TP_TIME" />
       </CallInfo>
     </Call>
   </Parts>
   <Wires>
-    <Wire UId="33">
-      <Powerrail />
-      <NameCon UId="31" Name="en" />
-    </Wire>
-    <Wire UId="34">
-      <IdentCon UId="21" />
-      <NameCon UId="31" Name="start" />
-    </Wire>
-    <Wire UId="35">
-      <IdentCon UId="22" />
-      <NameCon UId="31" Name="stop" />
-    </Wire>
-    <Wire UId="36">
-      <IdentCon UId="23" />
-      <NameCon UId="31" Name="Time-Right" />
-    </Wire>
     <Wire UId="37">
-      <IdentCon UId="24" />
-      <NameCon UId="31" Name="Time-Right-Rest" />
+      <Powerrail />
+      <NameCon UId="35" Name="en" />
     </Wire>
     <Wire UId="38">
-      <IdentCon UId="25" />
-      <NameCon UId="31" Name="Time-Left" />
+      <IdentCon UId="21" />
+      <NameCon UId="35" Name="start" />
     </Wire>
     <Wire UId="39">
-      <IdentCon UId="26" />
-      <NameCon UId="31" Name="memory-stop" />
+      <IdentCon UId="22" />
+      <NameCon UId="35" Name="stop" />
     </Wire>
     <Wire UId="40">
-      <IdentCon UId="27" />
-      <NameCon UId="31" Name="memory-start" />
+      <IdentCon UId="23" />
+      <NameCon UId="35" Name="Time-Right" />
     </Wire>
     <Wire UId="41">
-      <IdentCon UId="28" />
-      <NameCon UId="31" Name="Time-Left-Rest" />
+      <IdentCon UId="24" />
+      <NameCon UId="35" Name="Time-Right-Rest" />
     </Wire>
     <Wire UId="42">
-      <NameCon UId="31" Name="conveyor-right" />
-      <IdentCon UId="29" />
+      <IdentCon UId="25" />
+      <NameCon UId="35" Name="Time-Left" />
     </Wire>
     <Wire UId="43">
-      <NameCon UId="31" Name="conveyor-left" />
+      <IdentCon UId="26" />
+      <NameCon UId="35" Name="Time-Left-Rest" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="27" />
+      <NameCon UId="35" Name="memory-stop" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="28" />
+      <NameCon UId="35" Name="memory-start" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="29" />
+      <NameCon UId="35" Name="Timer-Right" />
+    </Wire>
+    <Wire UId="47">
       <IdentCon UId="30" />
+      <NameCon UId="35" Name="Timer-Right-Rest" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="31" />
+      <NameCon UId="35" Name="Timer-Left" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="32" />
+      <NameCon UId="35" Name="Timer-Left-Rest" />
+    </Wire>
+    <Wire UId="50">
+      <NameCon UId="35" Name="conveyor-right" />
+      <IdentCon UId="33" />
+    </Wire>
+    <Wire UId="51">
+      <NameCon UId="35" Name="conveyor-left" />
+      <IdentCon UId="34" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -223,35 +267,59 @@
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
         <Component Name="Controler Time" />
-        <Component Name="mem-stop_2" />
+        <Component Name="Time-Left-Rest-con2" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
         <Component Name="Controler Time" />
-        <Component Name="mem-strat_2" />
+        <Component Name="mem-stop_2" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
         <Component Name="Controler Time" />
-        <Component Name="Time-Left-Rest-con2" />
+        <Component Name="mem-strat_2" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="29">
       <Symbol>
-        <Component Name="Belt Conveyor (4m) 1 (+)" />
+        <Component Name="Controler Time" />
+        <Component Name="timer-right-2" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="30">
       <Symbol>
+        <Component Name="Controler Time" />
+        <Component Name="timer-right-rest-2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="Controler Time" />
+        <Component Name="timer-left-2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="Controler Time" />
+        <Component Name="timer-left-rest-2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="Belt Conveyor (4m) 1 (+)" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
         <Component Name="Belt Conveyor (4m) 1 (-)" />
       </Symbol>
     </Access>
-    <Call UId="31">
+    <Call UId="35">
       <CallInfo Name="faceplate" BlockType="FB">
-        <Instance Scope="GlobalVariable" UId="32">
-          <Component Name="faceplate_DB_1" />
+        <Instance Scope="GlobalVariable" UId="36">
+          <Component Name="faceplate_DB_2" />
         </Instance>
         <Parameter Name="start" Section="Input" Type="Bool" />
         <Parameter Name="stop" Section="Input" Type="Bool" />
@@ -260,56 +328,76 @@
         <Parameter Name="Time-Right" Section="InOut" Type="Time" />
         <Parameter Name="Time-Right-Rest" Section="InOut" Type="Time" />
         <Parameter Name="Time-Left" Section="InOut" Type="Time" />
+        <Parameter Name="Time-Left-Rest" Section="InOut" Type="Time" />
         <Parameter Name="memory-stop" Section="InOut" Type="Bool" />
         <Parameter Name="memory-start" Section="InOut" Type="Bool" />
-        <Parameter Name="Time-Left-Rest" Section="InOut" Type="Time" />
+        <Parameter Name="Timer-Right" Section="InOut" Type="TP_TIME" />
+        <Parameter Name="Timer-Right-Rest" Section="InOut" Type="TP_TIME" />
+        <Parameter Name="Timer-Left" Section="InOut" Type="TP_TIME" />
+        <Parameter Name="Timer-Left-Rest" Section="InOut" Type="TP_TIME" />
       </CallInfo>
     </Call>
   </Parts>
   <Wires>
-    <Wire UId="33">
-      <Powerrail />
-      <NameCon UId="31" Name="en" />
-    </Wire>
-    <Wire UId="34">
-      <IdentCon UId="21" />
-      <NameCon UId="31" Name="start" />
-    </Wire>
-    <Wire UId="35">
-      <IdentCon UId="22" />
-      <NameCon UId="31" Name="stop" />
-    </Wire>
-    <Wire UId="36">
-      <IdentCon UId="23" />
-      <NameCon UId="31" Name="Time-Right" />
-    </Wire>
     <Wire UId="37">
-      <IdentCon UId="24" />
-      <NameCon UId="31" Name="Time-Right-Rest" />
+      <Powerrail />
+      <NameCon UId="35" Name="en" />
     </Wire>
     <Wire UId="38">
-      <IdentCon UId="25" />
-      <NameCon UId="31" Name="Time-Left" />
+      <IdentCon UId="21" />
+      <NameCon UId="35" Name="start" />
     </Wire>
     <Wire UId="39">
-      <IdentCon UId="26" />
-      <NameCon UId="31" Name="memory-stop" />
+      <IdentCon UId="22" />
+      <NameCon UId="35" Name="stop" />
     </Wire>
     <Wire UId="40">
-      <IdentCon UId="27" />
-      <NameCon UId="31" Name="memory-start" />
+      <IdentCon UId="23" />
+      <NameCon UId="35" Name="Time-Right" />
     </Wire>
     <Wire UId="41">
-      <IdentCon UId="28" />
-      <NameCon UId="31" Name="Time-Left-Rest" />
+      <IdentCon UId="24" />
+      <NameCon UId="35" Name="Time-Right-Rest" />
     </Wire>
     <Wire UId="42">
-      <NameCon UId="31" Name="conveyor-right" />
-      <IdentCon UId="29" />
+      <IdentCon UId="25" />
+      <NameCon UId="35" Name="Time-Left" />
     </Wire>
     <Wire UId="43">
-      <NameCon UId="31" Name="conveyor-left" />
+      <IdentCon UId="26" />
+      <NameCon UId="35" Name="Time-Left-Rest" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="27" />
+      <NameCon UId="35" Name="memory-stop" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="28" />
+      <NameCon UId="35" Name="memory-start" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="29" />
+      <NameCon UId="35" Name="Timer-Right" />
+    </Wire>
+    <Wire UId="47">
       <IdentCon UId="30" />
+      <NameCon UId="35" Name="Timer-Right-Rest" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="31" />
+      <NameCon UId="35" Name="Timer-Left" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="32" />
+      <NameCon UId="35" Name="Timer-Left-Rest" />
+    </Wire>
+    <Wire UId="50">
+      <NameCon UId="35" Name="conveyor-right" />
+      <IdentCon UId="33" />
+    </Wire>
+    <Wire UId="51">
+      <NameCon UId="35" Name="conveyor-left" />
+      <IdentCon UId="34" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -373,35 +461,59 @@
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
         <Component Name="Controler Time" />
-        <Component Name="mem-stop_3" />
+        <Component Name="Time-Left-Rest-con3" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
         <Component Name="Controler Time" />
-        <Component Name="mem-strat_3" />
+        <Component Name="mem-stop_3" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
         <Component Name="Controler Time" />
-        <Component Name="Time-Left-Rest-con3" />
+        <Component Name="mem-strat_3" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="29">
       <Symbol>
-        <Component Name="Belt Conveyor (4m) 2 (+)" />
+        <Component Name="Controler Time" />
+        <Component Name="timer-right-3" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="30">
       <Symbol>
+        <Component Name="Controler Time" />
+        <Component Name="timer-right-rest-3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="Controler Time" />
+        <Component Name="timer-left-3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="Controler Time" />
+        <Component Name="timer-left-rest-3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="Belt Conveyor (4m) 2 (+)" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
         <Component Name="Belt Conveyor (4m) 2 (-)" />
       </Symbol>
     </Access>
-    <Call UId="31">
+    <Call UId="35">
       <CallInfo Name="faceplate" BlockType="FB">
-        <Instance Scope="GlobalVariable" UId="32">
-          <Component Name="faceplate_DB_1" />
+        <Instance Scope="GlobalVariable" UId="36">
+          <Component Name="faceplate_DB_3" />
         </Instance>
         <Parameter Name="start" Section="Input" Type="Bool" />
         <Parameter Name="stop" Section="Input" Type="Bool" />
@@ -410,56 +522,76 @@
         <Parameter Name="Time-Right" Section="InOut" Type="Time" />
         <Parameter Name="Time-Right-Rest" Section="InOut" Type="Time" />
         <Parameter Name="Time-Left" Section="InOut" Type="Time" />
+        <Parameter Name="Time-Left-Rest" Section="InOut" Type="Time" />
         <Parameter Name="memory-stop" Section="InOut" Type="Bool" />
         <Parameter Name="memory-start" Section="InOut" Type="Bool" />
-        <Parameter Name="Time-Left-Rest" Section="InOut" Type="Time" />
+        <Parameter Name="Timer-Right" Section="InOut" Type="TP_TIME" />
+        <Parameter Name="Timer-Right-Rest" Section="InOut" Type="TP_TIME" />
+        <Parameter Name="Timer-Left" Section="InOut" Type="TP_TIME" />
+        <Parameter Name="Timer-Left-Rest" Section="InOut" Type="TP_TIME" />
       </CallInfo>
     </Call>
   </Parts>
   <Wires>
-    <Wire UId="33">
-      <Powerrail />
-      <NameCon UId="31" Name="en" />
-    </Wire>
-    <Wire UId="34">
-      <IdentCon UId="21" />
-      <NameCon UId="31" Name="start" />
-    </Wire>
-    <Wire UId="35">
-      <IdentCon UId="22" />
-      <NameCon UId="31" Name="stop" />
-    </Wire>
-    <Wire UId="36">
-      <IdentCon UId="23" />
-      <NameCon UId="31" Name="Time-Right" />
-    </Wire>
     <Wire UId="37">
-      <IdentCon UId="24" />
-      <NameCon UId="31" Name="Time-Right-Rest" />
+      <Powerrail />
+      <NameCon UId="35" Name="en" />
     </Wire>
     <Wire UId="38">
-      <IdentCon UId="25" />
-      <NameCon UId="31" Name="Time-Left" />
+      <IdentCon UId="21" />
+      <NameCon UId="35" Name="start" />
     </Wire>
     <Wire UId="39">
-      <IdentCon UId="26" />
-      <NameCon UId="31" Name="memory-stop" />
+      <IdentCon UId="22" />
+      <NameCon UId="35" Name="stop" />
     </Wire>
     <Wire UId="40">
-      <IdentCon UId="27" />
-      <NameCon UId="31" Name="memory-start" />
+      <IdentCon UId="23" />
+      <NameCon UId="35" Name="Time-Right" />
     </Wire>
     <Wire UId="41">
-      <IdentCon UId="28" />
-      <NameCon UId="31" Name="Time-Left-Rest" />
+      <IdentCon UId="24" />
+      <NameCon UId="35" Name="Time-Right-Rest" />
     </Wire>
     <Wire UId="42">
-      <NameCon UId="31" Name="conveyor-right" />
-      <IdentCon UId="29" />
+      <IdentCon UId="25" />
+      <NameCon UId="35" Name="Time-Left" />
     </Wire>
     <Wire UId="43">
-      <NameCon UId="31" Name="conveyor-left" />
+      <IdentCon UId="26" />
+      <NameCon UId="35" Name="Time-Left-Rest" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="27" />
+      <NameCon UId="35" Name="memory-stop" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="28" />
+      <NameCon UId="35" Name="memory-start" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="29" />
+      <NameCon UId="35" Name="Timer-Right" />
+    </Wire>
+    <Wire UId="47">
       <IdentCon UId="30" />
+      <NameCon UId="35" Name="Timer-Right-Rest" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="31" />
+      <NameCon UId="35" Name="Timer-Left" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="32" />
+      <NameCon UId="35" Name="Timer-Left-Rest" />
+    </Wire>
+    <Wire UId="50">
+      <NameCon UId="35" Name="conveyor-right" />
+      <IdentCon UId="33" />
+    </Wire>
+    <Wire UId="51">
+      <NameCon UId="35" Name="conveyor-left" />
+      <IdentCon UId="34" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -523,35 +655,59 @@
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
         <Component Name="Controler Time" />
-        <Component Name="mem-stop_4" />
+        <Component Name="Time-Left-Rest-con4" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
         <Component Name="Controler Time" />
-        <Component Name="mem-strat_4" />
+        <Component Name="mem-stop_4" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
         <Component Name="Controler Time" />
-        <Component Name="Time-Left-Rest-con4" />
+        <Component Name="mem-strat_4" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="29">
       <Symbol>
-        <Component Name="Belt Conveyor (4m) 3 (+)" />
+        <Component Name="Controler Time" />
+        <Component Name="timer-right-4" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="30">
       <Symbol>
+        <Component Name="Controler Time" />
+        <Component Name="timer-right-rest-4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="Controler Time" />
+        <Component Name="timer-left-4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="Controler Time" />
+        <Component Name="timer-left-rest-4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="Belt Conveyor (4m) 3 (+)" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
         <Component Name="Belt Conveyor (4m) 3 (-)" />
       </Symbol>
     </Access>
-    <Call UId="31">
+    <Call UId="35">
       <CallInfo Name="faceplate" BlockType="FB">
-        <Instance Scope="GlobalVariable" UId="32">
-          <Component Name="faceplate_DB_1" />
+        <Instance Scope="GlobalVariable" UId="36">
+          <Component Name="faceplate_DB_4" />
         </Instance>
         <Parameter Name="start" Section="Input" Type="Bool" />
         <Parameter Name="stop" Section="Input" Type="Bool" />
@@ -560,56 +716,76 @@
         <Parameter Name="Time-Right" Section="InOut" Type="Time" />
         <Parameter Name="Time-Right-Rest" Section="InOut" Type="Time" />
         <Parameter Name="Time-Left" Section="InOut" Type="Time" />
+        <Parameter Name="Time-Left-Rest" Section="InOut" Type="Time" />
         <Parameter Name="memory-stop" Section="InOut" Type="Bool" />
         <Parameter Name="memory-start" Section="InOut" Type="Bool" />
-        <Parameter Name="Time-Left-Rest" Section="InOut" Type="Time" />
+        <Parameter Name="Timer-Right" Section="InOut" Type="TP_TIME" />
+        <Parameter Name="Timer-Right-Rest" Section="InOut" Type="TP_TIME" />
+        <Parameter Name="Timer-Left" Section="InOut" Type="TP_TIME" />
+        <Parameter Name="Timer-Left-Rest" Section="InOut" Type="TP_TIME" />
       </CallInfo>
     </Call>
   </Parts>
   <Wires>
-    <Wire UId="33">
-      <Powerrail />
-      <NameCon UId="31" Name="en" />
-    </Wire>
-    <Wire UId="34">
-      <IdentCon UId="21" />
-      <NameCon UId="31" Name="start" />
-    </Wire>
-    <Wire UId="35">
-      <IdentCon UId="22" />
-      <NameCon UId="31" Name="stop" />
-    </Wire>
-    <Wire UId="36">
-      <IdentCon UId="23" />
-      <NameCon UId="31" Name="Time-Right" />
-    </Wire>
     <Wire UId="37">
-      <IdentCon UId="24" />
-      <NameCon UId="31" Name="Time-Right-Rest" />
+      <Powerrail />
+      <NameCon UId="35" Name="en" />
     </Wire>
     <Wire UId="38">
-      <IdentCon UId="25" />
-      <NameCon UId="31" Name="Time-Left" />
+      <IdentCon UId="21" />
+      <NameCon UId="35" Name="start" />
     </Wire>
     <Wire UId="39">
-      <IdentCon UId="26" />
-      <NameCon UId="31" Name="memory-stop" />
+      <IdentCon UId="22" />
+      <NameCon UId="35" Name="stop" />
     </Wire>
     <Wire UId="40">
-      <IdentCon UId="27" />
-      <NameCon UId="31" Name="memory-start" />
+      <IdentCon UId="23" />
+      <NameCon UId="35" Name="Time-Right" />
     </Wire>
     <Wire UId="41">
-      <IdentCon UId="28" />
-      <NameCon UId="31" Name="Time-Left-Rest" />
+      <IdentCon UId="24" />
+      <NameCon UId="35" Name="Time-Right-Rest" />
     </Wire>
     <Wire UId="42">
-      <NameCon UId="31" Name="conveyor-right" />
-      <IdentCon UId="29" />
+      <IdentCon UId="25" />
+      <NameCon UId="35" Name="Time-Left" />
     </Wire>
     <Wire UId="43">
-      <NameCon UId="31" Name="conveyor-left" />
+      <IdentCon UId="26" />
+      <NameCon UId="35" Name="Time-Left-Rest" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="27" />
+      <NameCon UId="35" Name="memory-stop" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="28" />
+      <NameCon UId="35" Name="memory-start" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="29" />
+      <NameCon UId="35" Name="Timer-Right" />
+    </Wire>
+    <Wire UId="47">
       <IdentCon UId="30" />
+      <NameCon UId="35" Name="Timer-Right-Rest" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="31" />
+      <NameCon UId="35" Name="Timer-Left" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="32" />
+      <NameCon UId="35" Name="Timer-Left-Rest" />
+    </Wire>
+    <Wire UId="50">
+      <NameCon UId="35" Name="conveyor-right" />
+      <IdentCon UId="33" />
+    </Wire>
+    <Wire UId="51">
+      <NameCon UId="35" Name="conveyor-left" />
+      <IdentCon UId="34" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
