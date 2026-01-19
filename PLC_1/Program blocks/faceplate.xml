@@ -19,12 +19,12 @@
     <Member Name="Time-Left-Rest" Datatype="Time" />
     <Member Name="memory-stop" Datatype="Bool" />
     <Member Name="memory-start" Datatype="Bool" />
+  </Section>
+  <Section Name="Static">
     <Member Name="Timer-Right" Datatype="TP_TIME" Version="1.0" />
     <Member Name="Timer-Right-Rest" Datatype="TP_TIME" Version="1.0" />
     <Member Name="Timer-Left" Datatype="TP_TIME" Version="1.0" />
     <Member Name="Timer-Left-Rest" Datatype="TP_TIME" Version="1.0" />
-  </Section>
-  <Section Name="Static">
     <Member Name="mem-start" Datatype="Bool" />
     <Member Name="mem-stop" Datatype="Bool" />
     <Member Name="mem-edge-1" Datatype="Bool" />
@@ -150,6 +150,157 @@
     </Access>
     <Access Scope="LocalVariable" UId="22">
       <Symbol>
+        <Component Name="Time-Left" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="23">
+      <Symbol>
+        <Component Name="Timer-Left" />
+        <Component Name="PT" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="24">
+      <Symbol>
+        <Component Name="Time-Left-Rest" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="25">
+      <Symbol>
+        <Component Name="Timer-Left-Rest" />
+        <Component Name="PT" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="26">
+      <Symbol>
+        <Component Name="Time-Right" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="27">
+      <Symbol>
+        <Component Name="Timer-Right" />
+        <Component Name="PT" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="28">
+      <Symbol>
+        <Component Name="Time-Right-Rest" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="29">
+      <Symbol>
+        <Component Name="Timer-Right-Rest" />
+        <Component Name="PT" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="30" />
+    <Part Name="Move" UId="31" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Move" UId="32" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Move" UId="33" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Move" UId="34" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+  </Parts>
+  <Wires>
+    <Wire UId="35">
+      <Powerrail />
+      <NameCon UId="30" Name="in" />
+    </Wire>
+    <Wire UId="36">
+      <IdentCon UId="21" />
+      <NameCon UId="30" Name="operand" />
+    </Wire>
+    <Wire UId="37">
+      <NameCon UId="30" Name="out" />
+      <NameCon UId="31" Name="en" />
+    </Wire>
+    <Wire UId="38">
+      <IdentCon UId="22" />
+      <NameCon UId="31" Name="in" />
+    </Wire>
+    <Wire UId="39">
+      <NameCon UId="31" Name="eno" />
+      <NameCon UId="32" Name="en" />
+    </Wire>
+    <Wire UId="40">
+      <NameCon UId="31" Name="out1" />
+      <IdentCon UId="23" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="24" />
+      <NameCon UId="32" Name="in" />
+    </Wire>
+    <Wire UId="42">
+      <NameCon UId="32" Name="eno" />
+      <NameCon UId="33" Name="en" />
+    </Wire>
+    <Wire UId="43">
+      <NameCon UId="32" Name="out1" />
+      <IdentCon UId="25" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="26" />
+      <NameCon UId="33" Name="in" />
+    </Wire>
+    <Wire UId="45">
+      <NameCon UId="33" Name="eno" />
+      <NameCon UId="34" Name="en" />
+    </Wire>
+    <Wire UId="46">
+      <NameCon UId="33" Name="out1" />
+      <IdentCon UId="27" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="28" />
+      <NameCon UId="34" Name="in" />
+    </Wire>
+    <Wire UId="48">
+      <NameCon UId="34" Name="out1" />
+      <IdentCon UId="29" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="9" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="B" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="D" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="LocalVariable" UId="21">
+      <Symbol>
+        <Component Name="mem-start" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="22">
+      <Symbol>
         <Component Name="Timer-Left-Rest" />
         <Component Name="Q" />
       </Symbol>
@@ -205,87 +356,6 @@
           <ProgrammingLanguage>LAD</ProgrammingLanguage>
         </AttributeList>
         <ObjectList>
-          <MultilingualText ID="9" CompositionName="Comment">
-            <ObjectList>
-              <MultilingualTextItem ID="A" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-          <MultilingualText ID="B" CompositionName="Title">
-            <ObjectList>
-              <MultilingualTextItem ID="C" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-        </ObjectList>
-      </SW.Blocks.CompileUnit>
-      <SW.Blocks.CompileUnit ID="D" CompositionName="CompileUnits">
-        <AttributeList>
-          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
-  <Parts>
-    <Access Scope="LocalVariable" UId="21">
-      <Symbol>
-        <Component Name="Timer-Right" />
-        <Component Name="Q" />
-      </Symbol>
-    </Access>
-    <Access Scope="LocalVariable" UId="22">
-      <Symbol>
-        <Component Name="mem-edge-1" />
-      </Symbol>
-    </Access>
-    <Access Scope="LocalVariable" UId="23">
-      <Symbol>
-        <Component Name="Timer-Right-Rest" />
-        <Component Name="PT" />
-      </Symbol>
-    </Access>
-    <Part Name="NContact" UId="24" />
-    <Part Name="TP" Version="1.0" UId="25">
-      <Instance Scope="LocalVariable" UId="26">
-        <Component Name="Timer-Right-Rest" />
-      </Instance>
-      <TemplateValue Name="time_type" Type="Type">Time</TemplateValue>
-    </Part>
-  </Parts>
-  <Wires>
-    <Wire UId="28">
-      <Powerrail />
-      <NameCon UId="24" Name="pre" />
-    </Wire>
-    <Wire UId="29">
-      <IdentCon UId="22" />
-      <NameCon UId="24" Name="bit" />
-    </Wire>
-    <Wire UId="30">
-      <IdentCon UId="21" />
-      <NameCon UId="24" Name="operand" />
-    </Wire>
-    <Wire UId="31">
-      <NameCon UId="24" Name="out" />
-      <NameCon UId="25" Name="IN" />
-    </Wire>
-    <Wire UId="32">
-      <IdentCon UId="23" />
-      <NameCon UId="25" Name="PT" />
-    </Wire>
-    <Wire UId="33">
-      <NameCon UId="25" Name="ET" />
-      <OpenCon UId="27" />
-    </Wire>
-  </Wires>
-</FlgNet></NetworkSource>
-          <ProgrammingLanguage>LAD</ProgrammingLanguage>
-        </AttributeList>
-        <ObjectList>
           <MultilingualText ID="E" CompositionName="Comment">
             <ObjectList>
               <MultilingualTextItem ID="F" CompositionName="Items">
@@ -314,53 +384,67 @@
   <Parts>
     <Access Scope="LocalVariable" UId="21">
       <Symbol>
-        <Component Name="Timer-Right-Rest" />
-        <Component Name="Q" />
+        <Component Name="mem-start" />
       </Symbol>
     </Access>
     <Access Scope="LocalVariable" UId="22">
       <Symbol>
-        <Component Name="mem-edge-2" />
+        <Component Name="Timer-Right" />
+        <Component Name="Q" />
       </Symbol>
     </Access>
     <Access Scope="LocalVariable" UId="23">
       <Symbol>
-        <Component Name="Timer-Left" />
+        <Component Name="mem-edge-1" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="24">
+      <Symbol>
+        <Component Name="Timer-Right-Rest" />
         <Component Name="PT" />
       </Symbol>
     </Access>
-    <Part Name="NContact" UId="24" />
-    <Part Name="TP" Version="1.0" UId="25">
-      <Instance Scope="LocalVariable" UId="26">
-        <Component Name="Timer-Left" />
+    <Part Name="Contact" UId="25" />
+    <Part Name="NContact" UId="26" />
+    <Part Name="TP" Version="1.0" UId="27">
+      <Instance Scope="LocalVariable" UId="28">
+        <Component Name="Timer-Right-Rest" />
       </Instance>
       <TemplateValue Name="time_type" Type="Type">Time</TemplateValue>
     </Part>
   </Parts>
   <Wires>
-    <Wire UId="28">
-      <Powerrail />
-      <NameCon UId="24" Name="pre" />
-    </Wire>
-    <Wire UId="29">
-      <IdentCon UId="22" />
-      <NameCon UId="24" Name="bit" />
-    </Wire>
     <Wire UId="30">
-      <IdentCon UId="21" />
-      <NameCon UId="24" Name="operand" />
+      <Powerrail />
+      <NameCon UId="25" Name="in" />
     </Wire>
     <Wire UId="31">
-      <NameCon UId="24" Name="out" />
-      <NameCon UId="25" Name="IN" />
+      <IdentCon UId="21" />
+      <NameCon UId="25" Name="operand" />
     </Wire>
     <Wire UId="32">
-      <IdentCon UId="23" />
-      <NameCon UId="25" Name="PT" />
+      <NameCon UId="25" Name="out" />
+      <NameCon UId="26" Name="pre" />
     </Wire>
     <Wire UId="33">
-      <NameCon UId="25" Name="ET" />
-      <OpenCon UId="27" />
+      <IdentCon UId="23" />
+      <NameCon UId="26" Name="bit" />
+    </Wire>
+    <Wire UId="34">
+      <IdentCon UId="22" />
+      <NameCon UId="26" Name="operand" />
+    </Wire>
+    <Wire UId="35">
+      <NameCon UId="26" Name="out" />
+      <NameCon UId="27" Name="IN" />
+    </Wire>
+    <Wire UId="36">
+      <IdentCon UId="24" />
+      <NameCon UId="27" Name="PT" />
+    </Wire>
+    <Wire UId="37">
+      <NameCon UId="27" Name="ET" />
+      <OpenCon UId="29" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -395,53 +479,67 @@
   <Parts>
     <Access Scope="LocalVariable" UId="21">
       <Symbol>
-        <Component Name="Timer-Left" />
-        <Component Name="Q" />
+        <Component Name="mem-start" />
       </Symbol>
     </Access>
     <Access Scope="LocalVariable" UId="22">
       <Symbol>
-        <Component Name="mem-edge-3" />
+        <Component Name="Timer-Right-Rest" />
+        <Component Name="Q" />
       </Symbol>
     </Access>
     <Access Scope="LocalVariable" UId="23">
       <Symbol>
-        <Component Name="Timer-Left-Rest" />
+        <Component Name="mem-edge-2" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="24">
+      <Symbol>
+        <Component Name="Timer-Left" />
         <Component Name="PT" />
       </Symbol>
     </Access>
-    <Part Name="NContact" UId="24" />
-    <Part Name="TP" Version="1.0" UId="25">
-      <Instance Scope="LocalVariable" UId="26">
-        <Component Name="Timer-Left-Rest" />
+    <Part Name="Contact" UId="25" />
+    <Part Name="NContact" UId="26" />
+    <Part Name="TP" Version="1.0" UId="27">
+      <Instance Scope="LocalVariable" UId="28">
+        <Component Name="Timer-Left" />
       </Instance>
       <TemplateValue Name="time_type" Type="Type">Time</TemplateValue>
     </Part>
   </Parts>
   <Wires>
-    <Wire UId="28">
-      <Powerrail />
-      <NameCon UId="24" Name="pre" />
-    </Wire>
-    <Wire UId="29">
-      <IdentCon UId="22" />
-      <NameCon UId="24" Name="bit" />
-    </Wire>
     <Wire UId="30">
-      <IdentCon UId="21" />
-      <NameCon UId="24" Name="operand" />
+      <Powerrail />
+      <NameCon UId="25" Name="in" />
     </Wire>
     <Wire UId="31">
-      <NameCon UId="24" Name="out" />
-      <NameCon UId="25" Name="IN" />
+      <IdentCon UId="21" />
+      <NameCon UId="25" Name="operand" />
     </Wire>
     <Wire UId="32">
-      <IdentCon UId="23" />
-      <NameCon UId="25" Name="PT" />
+      <NameCon UId="25" Name="out" />
+      <NameCon UId="26" Name="pre" />
     </Wire>
     <Wire UId="33">
-      <NameCon UId="25" Name="ET" />
-      <OpenCon UId="27" />
+      <IdentCon UId="23" />
+      <NameCon UId="26" Name="bit" />
+    </Wire>
+    <Wire UId="34">
+      <IdentCon UId="22" />
+      <NameCon UId="26" Name="operand" />
+    </Wire>
+    <Wire UId="35">
+      <NameCon UId="26" Name="out" />
+      <NameCon UId="27" Name="IN" />
+    </Wire>
+    <Wire UId="36">
+      <IdentCon UId="24" />
+      <NameCon UId="27" Name="PT" />
+    </Wire>
+    <Wire UId="37">
+      <NameCon UId="27" Name="ET" />
+      <OpenCon UId="29" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -476,18 +574,18 @@
   <Parts>
     <Access Scope="LocalVariable" UId="21">
       <Symbol>
-        <Component Name="Time-Left" />
+        <Component Name="mem-start" />
       </Symbol>
     </Access>
     <Access Scope="LocalVariable" UId="22">
       <Symbol>
         <Component Name="Timer-Left" />
-        <Component Name="PT" />
+        <Component Name="Q" />
       </Symbol>
     </Access>
     <Access Scope="LocalVariable" UId="23">
       <Symbol>
-        <Component Name="Time-Left-Rest" />
+        <Component Name="mem-edge-3" />
       </Symbol>
     </Access>
     <Access Scope="LocalVariable" UId="24">
@@ -496,89 +594,47 @@
         <Component Name="PT" />
       </Symbol>
     </Access>
-    <Access Scope="LocalVariable" UId="25">
-      <Symbol>
-        <Component Name="Time-Right" />
-      </Symbol>
-    </Access>
-    <Access Scope="LocalVariable" UId="26">
-      <Symbol>
-        <Component Name="Timer-Right" />
-        <Component Name="PT" />
-      </Symbol>
-    </Access>
-    <Access Scope="LocalVariable" UId="27">
-      <Symbol>
-        <Component Name="Time-Right-Rest" />
-      </Symbol>
-    </Access>
-    <Access Scope="LocalVariable" UId="28">
-      <Symbol>
-        <Component Name="Timer-Right-Rest" />
-        <Component Name="PT" />
-      </Symbol>
-    </Access>
-    <Part Name="Move" UId="29" DisabledENO="true">
-      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
-    </Part>
-    <Part Name="Move" UId="30" DisabledENO="true">
-      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
-    </Part>
-    <Part Name="Move" UId="31" DisabledENO="true">
-      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
-    </Part>
-    <Part Name="Move" UId="32" DisabledENO="true">
-      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    <Part Name="Contact" UId="25" />
+    <Part Name="NContact" UId="26" />
+    <Part Name="TP" Version="1.0" UId="27">
+      <Instance Scope="LocalVariable" UId="28">
+        <Component Name="Timer-Left-Rest" />
+      </Instance>
+      <TemplateValue Name="time_type" Type="Type">Time</TemplateValue>
     </Part>
   </Parts>
   <Wires>
-    <Wire UId="33">
+    <Wire UId="30">
       <Powerrail />
-      <NameCon UId="29" Name="en" />
+      <NameCon UId="25" Name="in" />
+    </Wire>
+    <Wire UId="31">
+      <IdentCon UId="21" />
+      <NameCon UId="25" Name="operand" />
+    </Wire>
+    <Wire UId="32">
+      <NameCon UId="25" Name="out" />
+      <NameCon UId="26" Name="pre" />
+    </Wire>
+    <Wire UId="33">
+      <IdentCon UId="23" />
+      <NameCon UId="26" Name="bit" />
     </Wire>
     <Wire UId="34">
-      <IdentCon UId="21" />
-      <NameCon UId="29" Name="in" />
+      <IdentCon UId="22" />
+      <NameCon UId="26" Name="operand" />
     </Wire>
     <Wire UId="35">
-      <NameCon UId="29" Name="eno" />
-      <NameCon UId="30" Name="en" />
+      <NameCon UId="26" Name="out" />
+      <NameCon UId="27" Name="IN" />
     </Wire>
     <Wire UId="36">
-      <NameCon UId="29" Name="out1" />
-      <IdentCon UId="22" />
+      <IdentCon UId="24" />
+      <NameCon UId="27" Name="PT" />
     </Wire>
     <Wire UId="37">
-      <IdentCon UId="23" />
-      <NameCon UId="30" Name="in" />
-    </Wire>
-    <Wire UId="38">
-      <NameCon UId="30" Name="eno" />
-      <NameCon UId="31" Name="en" />
-    </Wire>
-    <Wire UId="39">
-      <NameCon UId="30" Name="out1" />
-      <IdentCon UId="24" />
-    </Wire>
-    <Wire UId="40">
-      <IdentCon UId="25" />
-      <NameCon UId="31" Name="in" />
-    </Wire>
-    <Wire UId="41">
-      <NameCon UId="31" Name="eno" />
-      <NameCon UId="32" Name="en" />
-    </Wire>
-    <Wire UId="42">
-      <NameCon UId="31" Name="out1" />
-      <IdentCon UId="26" />
-    </Wire>
-    <Wire UId="43">
-      <IdentCon UId="27" />
-      <NameCon UId="32" Name="in" />
-    </Wire>
-    <Wire UId="44">
-      <NameCon UId="32" Name="out1" />
-      <IdentCon UId="28" />
+      <NameCon UId="27" Name="ET" />
+      <OpenCon UId="29" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -778,46 +834,147 @@
         <Component Name="mem-start" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="24">
+    <Access Scope="TypedConstant" UId="24">
+      <Constant>
+        <ConstantValue>T#0MS</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LocalVariable" UId="25">
+      <Symbol>
+        <Component Name="Timer-Left" />
+        <Component Name="PT" />
+      </Symbol>
+    </Access>
+    <Access Scope="TypedConstant" UId="26">
+      <Constant>
+        <ConstantValue>T#0MS</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LocalVariable" UId="27">
+      <Symbol>
+        <Component Name="Timer-Left-Rest" />
+        <Component Name="PT" />
+      </Symbol>
+    </Access>
+    <Access Scope="TypedConstant" UId="28">
+      <Constant>
+        <ConstantValue>T#0MS</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LocalVariable" UId="29">
+      <Symbol>
+        <Component Name="Timer-Right" />
+        <Component Name="PT" />
+      </Symbol>
+    </Access>
+    <Access Scope="TypedConstant" UId="30">
+      <Constant>
+        <ConstantValue>T#0MS</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LocalVariable" UId="31">
+      <Symbol>
+        <Component Name="Timer-Right-Rest" />
+        <Component Name="PT" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="32">
       <Negated Name="operand" />
     </Part>
-    <Part Name="Contact" UId="25">
+    <Part Name="Contact" UId="33">
       <Negated Name="operand" />
     </Part>
-    <Part Name="O" UId="26">
+    <Part Name="O" UId="34">
       <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
     </Part>
-    <Part Name="RCoil" UId="27" />
+    <Part Name="RCoil" UId="35" />
+    <Part Name="Move" UId="36" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Move" UId="37" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Move" UId="38" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Move" UId="39" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
   </Parts>
   <Wires>
-    <Wire UId="28">
+    <Wire UId="40">
       <Powerrail />
-      <NameCon UId="24" Name="in" />
-      <NameCon UId="25" Name="in" />
+      <NameCon UId="32" Name="in" />
+      <NameCon UId="33" Name="in" />
     </Wire>
-    <Wire UId="29">
+    <Wire UId="41">
       <IdentCon UId="21" />
-      <NameCon UId="24" Name="operand" />
+      <NameCon UId="32" Name="operand" />
     </Wire>
-    <Wire UId="30">
-      <NameCon UId="24" Name="out" />
-      <NameCon UId="26" Name="in1" />
+    <Wire UId="42">
+      <NameCon UId="32" Name="out" />
+      <NameCon UId="34" Name="in1" />
     </Wire>
-    <Wire UId="31">
+    <Wire UId="43">
       <IdentCon UId="22" />
-      <NameCon UId="25" Name="operand" />
+      <NameCon UId="33" Name="operand" />
     </Wire>
-    <Wire UId="32">
-      <NameCon UId="25" Name="out" />
-      <NameCon UId="26" Name="in2" />
+    <Wire UId="44">
+      <NameCon UId="33" Name="out" />
+      <NameCon UId="34" Name="in2" />
     </Wire>
-    <Wire UId="33">
-      <NameCon UId="26" Name="out" />
-      <NameCon UId="27" Name="in" />
+    <Wire UId="45">
+      <NameCon UId="34" Name="out" />
+      <NameCon UId="35" Name="in" />
+      <NameCon UId="36" Name="en" />
     </Wire>
-    <Wire UId="34">
+    <Wire UId="46">
       <IdentCon UId="23" />
-      <NameCon UId="27" Name="operand" />
+      <NameCon UId="35" Name="operand" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="24" />
+      <NameCon UId="36" Name="in" />
+    </Wire>
+    <Wire UId="48">
+      <NameCon UId="36" Name="eno" />
+      <NameCon UId="37" Name="en" />
+    </Wire>
+    <Wire UId="49">
+      <NameCon UId="36" Name="out1" />
+      <IdentCon UId="25" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="26" />
+      <NameCon UId="37" Name="in" />
+    </Wire>
+    <Wire UId="51">
+      <NameCon UId="37" Name="eno" />
+      <NameCon UId="38" Name="en" />
+    </Wire>
+    <Wire UId="52">
+      <NameCon UId="37" Name="out1" />
+      <IdentCon UId="27" />
+    </Wire>
+    <Wire UId="53">
+      <IdentCon UId="28" />
+      <NameCon UId="38" Name="in" />
+    </Wire>
+    <Wire UId="54">
+      <NameCon UId="38" Name="eno" />
+      <NameCon UId="39" Name="en" />
+    </Wire>
+    <Wire UId="55">
+      <NameCon UId="38" Name="out1" />
+      <IdentCon UId="29" />
+    </Wire>
+    <Wire UId="56">
+      <IdentCon UId="30" />
+      <NameCon UId="39" Name="in" />
+    </Wire>
+    <Wire UId="57">
+      <NameCon UId="39" Name="out1" />
+      <IdentCon UId="31" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>

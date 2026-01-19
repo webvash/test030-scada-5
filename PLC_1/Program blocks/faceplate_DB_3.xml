@@ -21,12 +21,12 @@
     <Member Name="Time-Left-Rest" Datatype="Time" />
     <Member Name="memory-stop" Datatype="Bool" />
     <Member Name="memory-start" Datatype="Bool" />
+  </Section>
+  <Section Name="Static">
     <Member Name="Timer-Right" Datatype="TP_TIME" Version="1.0" />
     <Member Name="Timer-Right-Rest" Datatype="TP_TIME" Version="1.0" />
     <Member Name="Timer-Left" Datatype="TP_TIME" Version="1.0" />
     <Member Name="Timer-Left-Rest" Datatype="TP_TIME" Version="1.0" />
-  </Section>
-  <Section Name="Static">
     <Member Name="mem-start" Datatype="Bool" />
     <Member Name="mem-stop" Datatype="Bool" />
     <Member Name="mem-edge-1" Datatype="Bool" />
